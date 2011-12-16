@@ -1,4 +1,4 @@
-1324052302
+1324054184
 Application	C:/Users/Thomas/Ruby/comptassoce/config/application.rb	  class Application 
 ApplicationController	C:/Users/Thomas/Ruby/comptassoce/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	C:/Users/Thomas/Ruby/comptassoce/app/helpers/application_helper.rb	module ApplicationHelper
