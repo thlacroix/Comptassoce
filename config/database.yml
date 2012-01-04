@@ -29,6 +29,12 @@ production:
   encoding: utf8
   database: comptassoce
   pool: 5
+<<<<<<< HEAD
   username: comptassoce
   password: comptassoce
 #  socket: /tmp/mysql.sock
+=======
+  username: root
+  password: camuspipo
+  socket: /tmp/mysql.sock
+>>>>>>> a39d47f47282654498508c41dec5739c45d8f6ed

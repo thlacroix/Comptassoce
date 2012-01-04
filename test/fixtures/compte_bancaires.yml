@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  banque: MyString
+  nom: MyString
+  iban: MyString
+  bic: MyString
+  proprietaire: MyString
+
+two:
+  banque: MyString
+  nom: MyString
+  iban: MyString
+  bic: MyString
+  proprietaire: MyString

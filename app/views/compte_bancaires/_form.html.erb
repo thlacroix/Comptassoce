@@ -1,0 +1,37 @@
+<%= form_for(@compte_bancaire) do |f| %>
+  <% if @compte_bancaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compte_bancaire.errors.count, "error") %> prohibited this compte_bancaire from being saved:</h2>
+
+      <ul>
+      <% @compte_bancaire.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :banque %><br />
+    <%= f.text_field :banque %>
+  </div>
+  <div class="field">
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </div>
+  <div class="field">
+    <%= f.label :iban %><br />
+    <%= f.text_field :iban %>
+  </div>
+  <div class="field">
+    <%= f.label :bic %><br />
+    <%= f.text_field :bic %>
+  </div>
+  <div class="field">
+    <%= f.label :proprietaire %><br />
+    <%= f.text_field :proprietaire %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

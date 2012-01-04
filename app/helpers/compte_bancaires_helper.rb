@@ -1,0 +1,2 @@
+module CompteBancairesHelper
+end
