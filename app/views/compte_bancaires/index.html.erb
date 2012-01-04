@@ -1,4 +1,4 @@
-<h1>Listing compte_bancaires</h1>
+﻿<h1>Liste des Comptes Bancaires</h1>
 
 <table>
   <tr>
@@ -6,10 +6,10 @@
     <th>Nom</th>
     <th>Iban</th>
     <th>Bic</th>
-    <th>Proprietaire</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Propriétaire</th>
+    <th>Voir</th>
+    <th>Editer</th>
+    <th>Supprimer</th>
   </tr>
 
 <% @compte_bancaires.each do |compte_bancaire| %>
@@ -19,13 +19,13 @@
     <td><%= compte_bancaire.iban %></td>
     <td><%= compte_bancaire.bic %></td>
     <td><%= compte_bancaire.proprietaire %></td>
-    <td><%= link_to 'Show', compte_bancaire %></td>
-    <td><%= link_to 'Edit', edit_compte_bancaire_path(compte_bancaire) %></td>
-    <td><%= link_to 'Destroy', compte_bancaire, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to image_tag("icons/document.png"), compte_bancaire %></td>
+    <td><%= link_to image_tag("icons/write.png"), edit_compte_bancaire_path(compte_bancaire) %></td>
+    <td><%= link_to image_tag("icons/delete.png"), compte_bancaire, confirm: 'Es-tu sûr ?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Compte bancaire', new_compte_bancaire_path %>
+<%= link_to image_tag("icons/add.png"), new_compte_bancaire_path %>
