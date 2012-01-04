@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Banque:</b>
+  <%= @compte_bancaire.banque %>
+</p>
+
+<p>
+  <b>Nom:</b>
+  <%= @compte_bancaire.nom %>
+</p>
+
+<p>
+  <b>Iban:</b>
+  <%= @compte_bancaire.iban %>
+</p>
+
+<p>
+  <b>Bic:</b>
+  <%= @compte_bancaire.bic %>
+</p>
+
+<p>
+  <b>Proprietaire:</b>
+  <%= @compte_bancaire.proprietaire %>
+</p>
+
+
+<%= link_to 'Edit', edit_compte_bancaire_path(@compte_bancaire) %> |
+<%= link_to 'Back', compte_bancaires_path %>

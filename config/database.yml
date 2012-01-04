@@ -6,7 +6,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: db/comptassoce
+  database: comptassoce
   pool: 5
   username: root
   password: camuspipo
@@ -18,7 +18,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: db/comptassoce
+  database: comptassoce
   pool: 5
   username: root
   password: camuspipo
@@ -27,7 +27,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: db/comptassoce
+  database: comptassoce
   pool: 5
   username: root
   password: camuspipo

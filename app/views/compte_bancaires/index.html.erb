@@ -1,0 +1,31 @@
+<h1>Listing compte_bancaires</h1>
+
+<table>
+  <tr>
+    <th>Banque</th>
+    <th>Nom</th>
+    <th>Iban</th>
+    <th>Bic</th>
+    <th>Proprietaire</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @compte_bancaires.each do |compte_bancaire| %>
+  <tr>
+    <td><%= compte_bancaire.banque %></td>
+    <td><%= compte_bancaire.nom %></td>
+    <td><%= compte_bancaire.iban %></td>
+    <td><%= compte_bancaire.bic %></td>
+    <td><%= compte_bancaire.proprietaire %></td>
+    <td><%= link_to 'Show', compte_bancaire %></td>
+    <td><%= link_to 'Edit', edit_compte_bancaire_path(compte_bancaire) %></td>
+    <td><%= link_to 'Destroy', compte_bancaire, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Compte bancaire', new_compte_bancaire_path %>
