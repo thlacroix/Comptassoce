@@ -1,0 +1,13 @@
+Jeu d'icônes pour le web
+========================
+Maurice Svay <mauriceATsvay.com>
+
+Ce pack contient 29 icônes dessinées pour le web.
+Les images ont ces caractéristiques:
+*couleurs 8bit
+*fond transparent
+*couleur de fond blanche
+
+Les icônes sont sous licence Creative Commons.
+Vous trouverez un exemplaire de cette licence à cette URL:
+http://creativecommons.org/licenses/by/2.0/fr/
