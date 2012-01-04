@@ -6,6 +6,11 @@ gem 'rails', '3.1.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.3.6'
+gem 'therubyracer'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'jquery-rails'
 
 # apache
 
