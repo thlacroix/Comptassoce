@@ -5,7 +5,16 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+<<<<<<< HEAD
 gem 'mysql2'
+=======
+gem 'mysql2', '0.3.6'
+gem 'therubyracer'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'jquery-rails'
+>>>>>>> 59e1d64297086180eb5806c97d6684ff8bba6571
 
 gem 'devise'
 
