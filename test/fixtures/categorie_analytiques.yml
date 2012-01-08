@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nom: MyString
+  annee: 1
+  facture: 
+  entree_journal: 
+
+two:
+  nom: MyString
+  annee: 1
+  facture: 
+  entree_journal: 

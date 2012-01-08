@@ -15,7 +15,7 @@
 <% @compte_bancaires.each do |compte_bancaire| %>
   <tr>
     <td><%= compte_bancaire.banque %></td>
-    <td><%= compte_bancaire.nom %></td>
+    <td><%= link_to compte_bancaire.nom, compte_bancaire_journals_path(compte_bancaire) %></td>
     <td><%= compte_bancaire.iban %></td>
     <td><%= compte_bancaire.bic %></td>
     <td><%= compte_bancaire.proprietaire %></td>

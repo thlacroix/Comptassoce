@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  entree_journal: 
+  tier: 
+  facture: 
+  compte_bancaire: 
+  numero: 
+  categorie_comptable: 
+  nom: MyString
+
+two:
+  entree_journal: 
+  tier: 
+  facture: 
+  compte_bancaire: 
+  numero: 
+  categorie_comptable: 
+  nom: MyString

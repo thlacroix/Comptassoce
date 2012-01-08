@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  libelle: MyString
+  date: 2012-01-04
+  valide: false
+  entree_journal: 
+  debit: 1.5
+  credit: 1.5
+  moyen: MyString
+  journal: 
+  facture: 
+
+two:
+  libelle: MyString
+  date: 2012-01-04
+  valide: false
+  entree_journal: 
+  debit: 1.5
+  credit: 1.5
+  moyen: MyString
+  journal: 
+  facture: 

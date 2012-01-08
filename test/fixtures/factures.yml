@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  montant_ht: 1.5
+  montant_ttc: 1.5
+  tva: 1.5
+  date: 2012-01-04
+  reference: MyString
+  libelle: MyString
+
+two:
+  montant_ht: 1.5
+  montant_ttc: 1.5
+  tva: 1.5
+  date: 2012-01-04
+  reference: MyString
+  libelle: MyString

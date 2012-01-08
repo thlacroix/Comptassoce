@@ -1,0 +1,22 @@
+﻿<h1>Liste des journaux du compte <em><%= @compte_bancaire.nom %></em></h1>
+
+<table>
+  <tr>
+	<th>Nom</th>
+	<th>Type</th>
+  </tr>
+
+<% @journals.each do |journal| %>
+  <tr>
+	<td><%= journal.nom %></td>
+	<td><%= journal.type %></td>
+	<td><%= link_to image_tag("icons/write.png"), edit_compte_bancaire_journal_path(@compte_bancaire,journal) %></td>
+    <td><%= link_to image_tag("icons/delete.png"), [@compte_bancaire,journal], confirm: "Are you sure?", method: :delete %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nouveau journal', new_compte_bancaire_journal_path %>

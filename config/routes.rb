@@ -1,5 +1,9 @@
 Comptassoce::Application.routes.draw do
-  resources :compte_bancaires
+  
+	resources :compte_bancaires do
+		resources :journals
+		resources :journal_has, :controller => :journals
+	end
 
   get "home/index"
 
