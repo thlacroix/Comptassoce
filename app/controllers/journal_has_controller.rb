@@ -1,0 +1,3 @@
+class JournalHasController < JournalsController
+
+end
