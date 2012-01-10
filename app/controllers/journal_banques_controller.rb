@@ -1,0 +1,2 @@
+class JournalBanquesController < JournalsController
+end

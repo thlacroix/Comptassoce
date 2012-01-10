@@ -1,0 +1,2 @@
+module JournalBanquesHelper
+end

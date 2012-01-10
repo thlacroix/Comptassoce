@@ -2,7 +2,10 @@ Comptassoce::Application.routes.draw do
   
 	resources :compte_bancaires do
 		resources :journals
+		resources :journal_banques
 		resources :journal_has
+		resources :journal_ventes
+		resources :journal_ods
 	end
 
   get "home/index"
