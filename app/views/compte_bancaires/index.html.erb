@@ -21,7 +21,7 @@
     <td><%= compte_bancaire.proprietaire %></td>
     <td><%= link_to image_tag("icons/document.png"), compte_bancaire %></td>
     <td><%= link_to image_tag("icons/write.png"), edit_compte_bancaire_path(compte_bancaire) %></td>
-    <td><%= link_to image_tag("icons/delete.png"), compte_bancaire, confirm: 'Es-tu sûr ?', method: :delete %></td>
+    <td><%= link_to image_tag("icons/delete.png"), compte_bancaire, :confirm => 'Es-tu sûr ?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
