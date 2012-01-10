@@ -6,7 +6,7 @@ class CompteBancairesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @compte_bancaires }
+      format.json { render json :@compte_bancaires }
     end
   end
 
@@ -17,7 +17,7 @@ class CompteBancairesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @compte_bancaire }
+      format.json { render json :@compte_bancaire }
     end
   end
 
@@ -28,7 +28,7 @@ class CompteBancairesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @compte_bancaire }
+      format.json { render json :@compte_bancaire }
     end
   end
 
@@ -44,11 +44,11 @@ class CompteBancairesController < ApplicationController
 
     respond_to do |format|
       if @compte_bancaire.save
-        format.html { redirect_to @compte_bancaire, notice: 'Compte bancaire was successfully created.' }
-        format.json { render json: @compte_bancaire, status: :created, location: @compte_bancaire }
+        format.html { redirect_to @compte_bancaire, :notice => 'Compte bancaire was successfully created.' }
+        format.json { render json :@compte_bancaire, :status => created, :location => :@compte_bancaire }
       else
-        format.html { render action: "new" }
-        format.json { render json: @compte_bancaire.errors, status: :unprocessable_entity }
+        format.html { render action :"new" }
+        format.json { render json :@compte_bancaire.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class CompteBancairesController < ApplicationController
 
     respond_to do |format|
       if @compte_bancaire.update_attributes(params[:compte_bancaire])
-        format.html { redirect_to @compte_bancaire, notice: 'Compte bancaire was successfully updated.' }
+        format.html { redirect_to @compte_bancaire, :notice => :'Compte bancaire was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @compte_bancaire.errors, status: :unprocessable_entity }
+        format.html { render action :"edit" }
+        format.json { render json :@compte_bancaire.errors, :status => :unprocessable_entity }
       end
     end
   end

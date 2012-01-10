@@ -12,7 +12,7 @@ before_filter :search_compte_bancaire
     @journals = @compte_bancaire.journals
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @journals }
+      format.json { render json :@journals }
     end
   end
 
@@ -23,7 +23,7 @@ before_filter :search_compte_bancaire
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @journal }
+      format.json { render json :@journal }
     end
   end
 
@@ -34,7 +34,7 @@ before_filter :search_compte_bancaire
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @journal }
+      format.json { render json :@journal }
     end
   end
 
@@ -66,11 +66,11 @@ before_filter :search_compte_bancaire
 		
     respond_to do |format|
       if @journal.save
-        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), notice: 'Journal was successfully created.' }
-        format.json { render json: compte_bancaire_journals_path(@compte_bancaire), status: :created, location: @journal }
+        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Journal was successfully created.' }
+        format.json { render json compte_bancaire_journals_path(@compte_bancaire), :status => created, :location => :@journal }
       else
-        format.html { render action: "new" }
-        format.json { render json: @journal.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render json :@journal.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -82,11 +82,11 @@ before_filter :search_compte_bancaire
 
     respond_to do |format|
       if @journal.update_attributes(params[:journal])
-        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), notice: 'Journal was successfully updated.' }
+        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Journal was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @journal.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render json :@journal.errors, :status => :unprocessable_entity }
       end
     end
   end
