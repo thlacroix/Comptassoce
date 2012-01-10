@@ -1,4 +1,4 @@
-class JournalsController < ApplicationController
+﻿class JournalsController < ApplicationController
 
 before_filter :search_compte_bancaire
   # GET /journals
@@ -66,7 +66,7 @@ before_filter :search_compte_bancaire
 		
     respond_to do |format|
       if @journal.save
-        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Journal was successfully created.' }
+        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Le Journal a bien été ajouté !' }
         format.json { render json compte_bancaire_journals_path(@compte_bancaire), :status => created, :location => :@journal }
       else
         format.html { render :action => "new" }
@@ -82,7 +82,7 @@ before_filter :search_compte_bancaire
 
     respond_to do |format|
       if @journal.update_attributes(params[:journal])
-        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Journal was successfully updated.' }
+        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), :notice => 'Le Journal a bien été modifié !' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
