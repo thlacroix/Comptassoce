@@ -20,8 +20,8 @@ test:
   encoding: utf8
   database: comptassoce
   pool: 5
-  username: comptassoce
   password: comptassoce
+  username: comptassoce
   socket: /tmp/mysql.sock
 
 production:

@@ -82,7 +82,7 @@ before_filter :search_compte_bancaire
 
     respond_to do |format|
       if @journal.update_attributes(params[:journal])
-        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), notice: 'Journal was successfully updated.' }
+        format.html { redirect_to compte_bancaire_journals_path(@compte_bancaire), notice: 'Journal '+@journal.nom+'was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

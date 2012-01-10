@@ -5,16 +5,12 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-<<<<<<< HEAD
-gem 'mysql2'
-=======
+
 gem 'mysql2', '0.3.6'
-gem 'therubyracer'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'jquery-rails'
->>>>>>> 59e1d64297086180eb5806c97d6684ff8bba6571
 
 gem 'devise'
 
@@ -22,13 +18,13 @@ gem 'passenger'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+# group :assets do
+#  gem 'sass-rails',   '~> 3.1.4'
+#  gem 'coffee-rails', '~> 3.1.1'
+#  gem 'uglifier', '>= 1.0.3'
+#end
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
