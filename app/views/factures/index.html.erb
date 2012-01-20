@@ -1,0 +1,33 @@
+<h1>Listing factures</h1>
+
+<table>
+  <tr>
+    <th>Montant ht</th>
+    <th>Montant ttc</th>
+    <th>Tva</th>
+    <th>Date</th>
+    <th>Reference</th>
+    <th>Libelle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @factures.each do |facture| %>
+  <tr>
+    <td><%= facture.montant_ht %></td>
+    <td><%= facture.montant_ttc %></td>
+    <td><%= facture.tva %></td>
+    <td><%= facture.date %></td>
+    <td><%= facture.reference %></td>
+    <td><%= facture.libelle %></td>
+    <td><%= link_to 'Show', facture %></td>
+    <td><%= link_to 'Edit', { :controller => params[:controller], :action => :edit, :id => facture.id } %></td>
+    <td><%= link_to 'Destroy', facture, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Facture', { :controller => params[:controller], :action => :new } %>

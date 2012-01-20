@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Montant ht:</b>
+  <%= @facture.montant_ht %>
+</p>
+
+<p>
+  <b>Montant ttc:</b>
+  <%= @facture.montant_ttc %>
+</p>
+
+<p>
+  <b>Tva:</b>
+  <%= @facture.tva %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @facture.date %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @facture.reference %>
+</p>
+
+<p>
+  <b>Libelle:</b>
+  <%= @facture.libelle %>
+</p>
+
+
+<%= link_to 'Edit', {:controller => params[:controller], :action => :edit, :id => @facture.id } %> |
+<%= link_to 'Back', {:controller => params[:controller], :action => :index } %>
