@@ -1,3 +1,3 @@
 class Fournisseur < Tier
-  belongs_to :facture_recue
+  has_many :facture_recue
 end

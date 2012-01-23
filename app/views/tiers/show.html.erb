@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nom:</b>
+  <%= @tier.nom %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%= @tier.mail %>
+</p>
+
+<p>
+  <b>Adresse:</b>
+  <%= @tier.adresse %>
+</p>
+
+<p>
+  <b>Ville:</b>
+  <%= @tier.ville %>
+</p>
+
+<p>
+  <b>Cp:</b>
+  <%= @tier.cp %>
+</p>
+
+<p>
+  <b>Tel:</b>
+  <%= @tier.tel %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @tier.description %>
+</p>
+
+<p>
+  <b>Iban:</b>
+  <%= @tier.iban %>
+</p>
+
+<p>
+  <b>Bic:</b>
+  <%= @tier.bic %>
+</p>
+
+
+<%= link_to 'Edit', [:edit, @tier] %> |
+<%= link_to 'Back', [params[:type].downcase.pluralize] %>

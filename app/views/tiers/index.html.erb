@@ -1,0 +1,39 @@
+<h1>Listing <%= params[:type] %> </h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Mail</th>
+    <th>Adresse</th>
+    <th>Ville</th>
+    <th>Cp</th>
+    <th>Tel</th>
+    <th>Description</th>
+    <th>Iban</th>
+    <th>Bic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tiers.each do |tier| %>
+  <tr>
+    <td><%= tier.nom %></td>
+    <td><%= tier.mail %></td>
+    <td><%= tier.adresse %></td>
+    <td><%= tier.ville %></td>
+    <td><%= tier.cp %></td>
+    <td><%= tier.tel %></td>
+    <td><%= tier.description %></td>
+    <td><%= tier.iban %></td>
+    <td><%= tier.bic %></td>
+    <td><%= link_to 'Show', tier %></td>
+    <td><%= link_to 'Edit', [:edit, tier] %></td>
+    <td><%= link_to 'Destroy', tier, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New '+ params[:type], [:new, params[:type].downcase] %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120106222747) do
+ActiveRecord::Schema.define(:version => 20120120143511) do
 
   create_table "categorie_analytiques", :force => true do |t|
     t.string   "nom"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20120106222747) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.integer  "tier_id"
   end
 
   create_table "journals", :force => true do |t|
@@ -104,12 +105,9 @@ ActiveRecord::Schema.define(:version => 20120106222747) do
     t.text     "description"
     t.string   "iban"
     t.string   "bic"
-    t.integer  "facture_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
   end
-
-  add_index "tiers", ["facture_id"], :name => "index_tiers_on_facture_id"
 
 end

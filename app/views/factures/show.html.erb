@@ -30,6 +30,11 @@
   <%= @facture.libelle %>
 </p>
 
+<p>
+  <b><%= params[:type] %>:</b>
+  <%= link_to @facture.tier.nom, @facture.tier %>
+</p>
+
 
 <%= link_to 'Edit', {:controller => params[:controller], :action => :edit, :id => @facture.id } %> |
 <%= link_to 'Back', {:controller => params[:controller], :action => :index } %>

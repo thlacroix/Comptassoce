@@ -1,3 +1,3 @@
 class Client < Tier
-  belongs_to :facture_emise
+  has_many :facture_emise
 end

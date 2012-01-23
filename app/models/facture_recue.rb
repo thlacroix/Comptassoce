@@ -1,4 +1,4 @@
 class FactureRecue < Facture
 	has_many :entree_facture_fournisseurs
-	has_one :fournisseur
+	belongs_to :fournisseur
 end

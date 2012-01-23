@@ -7,6 +7,10 @@ Comptassoce::Application.routes.draw do
 		resources :journal_ventes
 		resources :journal_ods
 	end
+        resources :facture_emises, :type => "Client"
+        resources :facture_recues, :type => "Fournisseur"
+        resources :clients, :controller => "tiers", :type => "Client"
+        resources :fournisseurs, :controller => "tiers", :type => "Fournisseur"
 
   get "home/index"
 

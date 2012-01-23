@@ -9,8 +9,10 @@
 <body>
 
 <table><tr><th><%= link_to "Accueil", root_path%></th><th><%= link_to "Liste des Comptes Bancaires", compte_bancaires_path%></th>
-<th><%= link_to "Facture fournisseur", facture_recues_path%></th>
-<th><%= link_to "Facture client", facture_emises_path%></th>
+<th><%= link_to "Factures fournisseur", facture_recues_path%></th>
+<th><%= link_to "Factures client", facture_emises_path%></th>
+<th><%= link_to "Fournisseurs", fournisseurs_path%></th>
+<th><%= link_to "Clients", clients_path%></th>
 </tr></table>
 <p class="notice"><%= notice %></p>
 <%= yield %>

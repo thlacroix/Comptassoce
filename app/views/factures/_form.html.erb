@@ -35,6 +35,10 @@
     <%= f.label :libelle %><br />
     <%= f.text_field :libelle %>
   </div>
+  <div class="field">
+    <%= f.label :tier %><br/>
+    <%= f.collection_select(:tier_id, params[:type].constantize.all, :id, :nom) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
