@@ -11,37 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120120143511) do
+ActiveRecord::Schema.define(:version => 20120123101749) do
 
   create_table "categorie_analytiques", :force => true do |t|
     t.string   "nom"
     t.integer  "annee"
-    t.integer  "facture_id"
-    t.integer  "entree_journal_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "categorie_analytiques", ["entree_journal_id"], :name => "index_categorie_analytiques_on_entree_journal_id"
-  add_index "categorie_analytiques", ["facture_id"], :name => "index_categorie_analytiques_on_facture_id"
-
   create_table "categorie_comptables", :force => true do |t|
-    t.integer  "entree_journal_id"
-    t.integer  "tier_id"
-    t.integer  "facture_id"
-    t.integer  "compte_bancaire_id"
     t.integer  "numero"
     t.integer  "categorie_comptable_id"
     t.string   "nom"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "niveau"
   end
 
   add_index "categorie_comptables", ["categorie_comptable_id"], :name => "index_categorie_comptables_on_categorie_comptable_id"
-  add_index "categorie_comptables", ["compte_bancaire_id"], :name => "index_categorie_comptables_on_compte_bancaire_id"
-  add_index "categorie_comptables", ["entree_journal_id"], :name => "index_categorie_comptables_on_entree_journal_id"
-  add_index "categorie_comptables", ["facture_id"], :name => "index_categorie_comptables_on_facture_id"
-  add_index "categorie_comptables", ["tier_id"], :name => "index_categorie_comptables_on_tier_id"
 
   create_table "compte_bancaires", :force => true do |t|
     t.string   "banque"
@@ -51,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20120120143511) do
     t.string   "proprietaire"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "categorie_comptable_id"
   end
 
   create_table "entree_journals", :force => true do |t|
@@ -66,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20120120143511) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.integer  "categorie_analytique_id"
+    t.integer  "categorie_comptable_id"
   end
 
   add_index "entree_journals", ["entree_journal_id"], :name => "index_entree_journals_on_entree_journal_id"
@@ -83,6 +74,8 @@ ActiveRecord::Schema.define(:version => 20120120143511) do
     t.datetime "updated_at"
     t.string   "type"
     t.integer  "tier_id"
+    t.integer  "categorie_analytique_id"
+    t.integer  "categorie_comptable_id"
   end
 
   create_table "journals", :force => true do |t|
@@ -108,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20120120143511) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.integer  "categorie_comptable_id"
   end
 
 end
