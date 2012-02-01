@@ -1,3 +1,5 @@
+<h1>Detail du <%= params[:type].downcase %></h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -44,6 +46,10 @@
   <b>Bic:</b>
   <%= @tier.bic %>
 </p>
+
+<p>
+  <b>Categorie comptable:</b>
+  <%= link_to @tier.categorie_comptable.numero_nom, @tier.categorie_comptable %></p>
 
 
 <%= link_to 'Edit', [:edit, @tier] %> |

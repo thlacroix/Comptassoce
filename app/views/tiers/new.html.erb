@@ -1,5 +1,5 @@
-<h1>New tier</h1>
+<h1>Creation d'un <%= params[:type].downcase %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', params[:type].downcase %>
+<%= link_to 'Back', [params[:type].downcase.pluralize] %>
