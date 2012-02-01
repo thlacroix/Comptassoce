@@ -1,4 +1,4 @@
-﻿<h1>Liste des Comptes Bancaires</h1>
+﻿<h1>Liste des comptes bancaires</h1>
 
 <table>
   <tr>
@@ -7,6 +7,7 @@
     <th>Iban</th>
     <th>Bic</th>
     <th>Propriétaire</th>
+    <th>Categorie Comptable</th>
     <th>Voir</th>
     <th>Editer</th>
     <th>Supprimer</th>
@@ -19,6 +20,7 @@
     <td><%= compte_bancaire.iban %></td>
     <td><%= compte_bancaire.bic %></td>
     <td><%= compte_bancaire.proprietaire %></td>
+    <td><%= compte_bancaire.categorie_comptable.numero_nom %></td>
     <td><%= link_to image_tag("icons/document.png"), compte_bancaire %></td>
     <td><%= link_to image_tag("icons/write.png"), edit_compte_bancaire_path(compte_bancaire) %></td>
     <td><%= link_to image_tag("icons/delete.png"), compte_bancaire, :confirm => 'Es-tu sûr ?', :method => :delete %></td>

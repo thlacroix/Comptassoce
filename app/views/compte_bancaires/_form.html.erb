@@ -31,6 +31,11 @@
     <%= f.label :proprietaire %><br />
     <%= f.text_field :proprietaire %>
   </div>
+  <div class="field">
+    <% @sous_classes = CategorieComptable.find_by_numero(5).categorie_comptables %>
+    <%= f.label :categorie_comptable %><br />
+    <%= f.grouped_collection_select(:categorie_comptable_id, @sous_classes, :categorie_comptables, :numero_nom, :id, :numero_nom) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
