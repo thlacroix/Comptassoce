@@ -1,0 +1,2 @@
+module CategorieAnalytiquesHelper
+end
