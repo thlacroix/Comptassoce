@@ -11,6 +11,8 @@ Comptassoce::Application.routes.draw do
         resources :facture_recues, :type => "Fournisseur"
         resources :clients, :controller => "tiers", :type => "Client"
         resources :fournisseurs, :controller => "tiers", :type => "Fournisseur"
+        resources :categorie_analytiques
+        resources :categorie_comptables
 
   get "home/index"
 
