@@ -1,0 +1,25 @@
+<h1>Liste des categories analytiques</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Annee</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categorie_analytiques.each do |categorie_analytique| %>
+  <tr>
+    <td><%= categorie_analytique.nom %></td>
+    <td><%= categorie_analytique.annee %></td>
+    <td><%= link_to 'Show', categorie_analytique %></td>
+    <td><%= link_to 'Edit', edit_categorie_analytique_path(categorie_analytique) %></td>
+    <td><%= link_to 'Destroy', categorie_analytique, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Categorie analytique', new_categorie_analytique_path %>
