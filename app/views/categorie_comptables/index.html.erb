@@ -1,0 +1,42 @@
+<h1>Liste des categories comptables</h1>
+
+<% @classes.order("numero ASC").each do |classe| %>
+
+<table>
+  <caption>Classe <%= classe.numero.to_s + " : " + classe.nom %></caption>
+  <tr>
+    <th>Numero</th>
+    <th>Nom</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% classe.categorie_comptables.order("numero ASC").each do |sous_classe| %>
+  <tr>
+    <th><%= sous_classe.numero %></th>
+    <th><%= sous_classe.nom %></th>
+    <th><%= link_to 'Show', sous_classe %></th>
+    <th><%= link_to 'Edit', edit_categorie_comptable_path(sous_classe) %></th>
+    <th><%= link_to 'Destroy', sous_classe, confirm: 'Are you sure?', method: :delete %></th>
+  </tr>
+
+    <% sous_classe.categorie_comptables.order("numero ASC").each do |categorie_comptable| %>
+      <tr>
+        <td><%= categorie_comptable.numero %></td>
+        <td><%= categorie_comptable.nom %></td>
+        <td><%= link_to 'Show', categorie_comptable %></td>
+        <td><%= link_to 'Edit', edit_categorie_comptable_path(categorie_comptable) %></td>
+        <td><%= link_to 'Destroy', categorie_comptable, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <%end%>
+
+  <%end%>
+
+</table>
+<br />
+
+<%end%>
+
+
+<%= link_to 'New Categorie comptable', new_categorie_comptable_path %>

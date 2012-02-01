@@ -1,0 +1,17 @@
+<h1>Detail de la categorie comptable</h1>
+
+<p id="notice"><%= notice %></p>
+
+<table>
+<tr><th></th><th>Numero</th><th>Nom</th></tr>
+<% libelle = "Classe" %>
+<% while @parents.length > 0 %>
+  <%parent = @parents.pop%>
+  <tr><td><%= libelle %></td><td><%= parent.numero %></td><td><%= parent.nom %></td></tr>
+  <%libelle = "Sous-" + libelle.downcase %>
+<%end%> 
+<tr><td><%= @categorie_comptable.libelle %></td><td><%= @categorie_comptable.numero %></td><td><%= @categorie_comptable.nom %></td></tr>
+
+
+<%= link_to 'Edit', edit_categorie_comptable_path(@categorie_comptable) %> |
+<%= link_to 'Back', categorie_comptables_path %>
