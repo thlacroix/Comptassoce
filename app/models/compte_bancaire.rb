@@ -4,5 +4,5 @@ class CompteBancaire < ActiveRecord::Base
 	has_many :journal_ventes
 	has_many :journal_ods
 	has_many :journal_banques
-	has_one :categorie_comptable
+	belongs_to :categorie_comptable
 end

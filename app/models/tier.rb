@@ -1,3 +1,3 @@
 class Tier < ActiveRecord::Base
-	has_one :categorie_comptable
+       belongs_to :categorie_comptable
 end
