@@ -39,6 +39,10 @@
     <%= f.label :tier %><br/>
     <%= f.collection_select(:tier_id, params[:type].constantize.all, :id, :nom) %>
   </div>
+  <div class="field">
+    <%= f.label :categorie_analytique %><br/>
+    <%= f.collection_select(:categorie_analytique_id, CategorieAnalytique.all, :id, :nom_annee) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

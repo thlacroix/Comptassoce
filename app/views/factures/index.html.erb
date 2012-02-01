@@ -1,4 +1,4 @@
-<h1>Listing factures</h1>
+<h1>Liste des factures <%= params[:type].downcase.pluralize%></h1>
 
 <table>
   <tr>
@@ -8,6 +8,8 @@
     <th>Date</th>
     <th>Reference</th>
     <th>Libelle</th>
+    <th><%= params[:type] %></th>
+    <th>Categorie Analytique</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,6 +23,8 @@
     <td><%= facture.date %></td>
     <td><%= facture.reference %></td>
     <td><%= facture.libelle %></td>
+    <td><%= facture.tier.nom %></td>
+    <td><%= facture.categorie_analytique.nom_annee %></td>
     <td><%= link_to 'Show', facture %></td>
     <td><%= link_to 'Edit', { :controller => params[:controller], :action => :edit, :id => facture.id } %></td>
     <td><%= link_to 'Destroy', facture, confirm: 'Are you sure?', method: :delete %></td>

@@ -1,3 +1,5 @@
+<h1>Detail de la facture <%= params[:type].downcase %></h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -35,6 +37,15 @@
   <%= link_to @facture.tier.nom, @facture.tier %>
 </p>
 
+<p>
+  <b>Categorie Analytique:</b>
+  <%= link_to @facture.categorie_analytique.nom_annee, @facture.categorie_analytique %>
+</p>
+
+<p>
+  <b>Categorie Comptable: </b>
+  <%= link_to @factue.categorie_comptable.numero_nom, @facture.categorie_comptable %>
+</p>
 
 <%= link_to 'Edit', {:controller => params[:controller], :action => :edit, :id => @facture.id } %> |
 <%= link_to 'Back', {:controller => params[:controller], :action => :index } %>
