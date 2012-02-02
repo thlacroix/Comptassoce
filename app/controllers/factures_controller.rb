@@ -29,6 +29,7 @@ class FacturesController < ApplicationController
   # GET /factures/new
   # GET /factures/new.json
   def new
+    @sous_classes = CategorieComptable.where(:niveau => 2)
     case params[:controller]
       when "facture_recues"
         @facture = FactureRecue.new
