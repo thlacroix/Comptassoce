@@ -10,6 +10,7 @@
     <th>Libelle</th>
     <th><%= params[:type] %></th>
     <th>Categorie Analytique</th>
+    <th>Categorie Comptable</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,6 +26,7 @@
     <td><%= facture.libelle %></td>
     <td><%= facture.tier.nom %></td>
     <td><%= facture.categorie_analytique.nom_annee %></td>
+    <td><%= facture.categorie_comptable.numero_nom %></td>
     <td><%= link_to 'Show', facture %></td>
     <td><%= link_to 'Edit', { :controller => params[:controller], :action => :edit, :id => facture.id } %></td>
     <td><%= link_to 'Destroy', facture, confirm: 'Are you sure?', method: :delete %></td>

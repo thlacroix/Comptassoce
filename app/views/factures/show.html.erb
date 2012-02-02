@@ -44,7 +44,7 @@
 
 <p>
   <b>Categorie Comptable: </b>
-  <%= link_to @factue.categorie_comptable.numero_nom, @facture.categorie_comptable %>
+  <%= link_to @facture.categorie_comptable.numero_nom, @facture.categorie_comptable %>
 </p>
 
 <%= link_to 'Edit', {:controller => params[:controller], :action => :edit, :id => @facture.id } %> |

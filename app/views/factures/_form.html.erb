@@ -43,6 +43,10 @@
     <%= f.label :categorie_analytique %><br/>
     <%= f.collection_select(:categorie_analytique_id, CategorieAnalytique.all, :id, :nom_annee) %>
   </div>
+  <div class="field">
+    <%= f.label :categorie_comptable %><br/>
+    <%= f.grouped_collection_select(:categorie_comptable_id, @sous_classes, :categorie_comptables, :numero_nom, :id, :numero_nom) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
