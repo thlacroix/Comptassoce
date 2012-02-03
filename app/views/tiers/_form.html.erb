@@ -47,8 +47,21 @@
     <%= f.label :bic %><br />
     <%= f.text_field :bic %>
   </div>
-  <div class="field">
-    <%= f.label :categorie_comptable
+
+  <!-- création de la catégorie comptable correspondant au tier directement --!>
+  <% f.fields_for :categorie_comptables do |c| %>
+    <p>
+<!--    <div class="field">--!>
+      <%= c.label :nom, 'Categorie comptable:' %><br/>
+      <%= c.text_field :nom %>
+   <!-- </div>--!>
+<!--    <div class="field">--!>
+      <%= c.label :numero, 'CategorieComptable' %><br/>
+      <%= c.text_field :numero %>
+<!--    </div>--!>
+    </p>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

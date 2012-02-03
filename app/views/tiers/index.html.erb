@@ -11,6 +11,7 @@
     <th>Description</th>
     <th>Iban</th>
     <th>Bic</th>
+    <th>Categorie comptable</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,6 +28,7 @@
     <td><%= tier.description %></td>
     <td><%= tier.iban %></td>
     <td><%= tier.bic %></td>
+    <td><%= tier.categorie_comptable.numero_nom %></td>
     <td><%= link_to 'Show', tier %></td>
     <td><%= link_to 'Edit', [:edit, tier] %></td>
     <td><%= link_to 'Destroy', tier, confirm: 'Are you sure?', method: :delete %></td>
