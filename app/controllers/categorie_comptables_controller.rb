@@ -42,18 +42,7 @@ class CategorieComptablesController < ApplicationController
   # POST /categorie_comptables.json
   def create
     @categorie_comptable = CategorieComptable.new(params[:categorie_comptable])
-    @categorie_comptable.niveau = @categorie_comptable.numero.to_s.length
-
-    num = @categorie_comptable.numero.to_s
-
-    case @categorie_comptable.niveau
-      when 1
-      when 2
-        @categorie_comptable.categorie_comptable = CategorieComptable.find_by_numero(num[0].to_i)
-      else
-        @categorie_comptable.categorie_comptable = CategorieComptable.find_by_numero(num[0..1].to_i)
-    end
-
+    @categorie_comptable.classer
 
     respond_to do |format|
       if @categorie_comptable.save

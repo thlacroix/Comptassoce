@@ -41,6 +41,18 @@ class TiersController < ApplicationController
   # POST /tiers.json
   def create
     @tier = params[:type].constantize.new(params[:tier])
+    
+    #création de la catégorie comptable associée
+    @categorie_comptable = CategorieComptable.new
+    nom = @tier.nom
+    if (params[:type] == Fournisseur)
+      numero = @categorie_comptable.last(40)
+    else
+      numero = @categorie_comptable.last(41)
+    end
+    @categorie_comptable = CategorieComptable.new(:nom => nom, :numero => numero)
+    @categorie_comptable.classer 
+    @tier.categorie_comptable = @categorie_comptable
 
     respond_to do |format|
       if @tier.save
