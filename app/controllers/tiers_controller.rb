@@ -45,7 +45,7 @@ class TiersController < ApplicationController
     #création de la catégorie comptable associée
     @categorie_comptable = CategorieComptable.new
     nom = @tier.nom
-    if (params[:type] == Fournisseur)
+    if (params[:type] == "Fournisseur")
       numero = @categorie_comptable.last(40)
     else
       numero = @categorie_comptable.last(41)

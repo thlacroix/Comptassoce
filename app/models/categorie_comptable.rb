@@ -39,7 +39,7 @@ class CategorieComptable < ActiveRecord::Base
     if (last.nil?)
       return num*10000 #pour avoir 4 zeros en plus
     else
-      return last + 1
+      return last.numero + 1
     end
   end
 
