@@ -3,3 +3,4 @@ class AddCategoriecomptableToTier < ActiveRecord::Migration
     add_column :tiers, :categorie_comptable_id, :int
   end
 end
+

@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120123101749) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "niveau"
+    t.integer  "tier_id"
   end
 
   add_index "categorie_comptables", ["categorie_comptable_id"], :name => "index_categorie_comptables_on_categorie_comptable_id"

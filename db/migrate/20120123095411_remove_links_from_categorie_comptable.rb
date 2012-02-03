@@ -6,8 +6,8 @@ class RemoveLinksFromCategorieComptable < ActiveRecord::Migration
   end
 
   def down
+    add_column :categorie_comptables, :tier_id, :int
     add_column :categorie_comptables, :compte_bancaire_id, :int
     add_column :categorie_comptables, :facture_id, :int
-    add_column :categorie_comptables, :tier_id, :int
   end
 end
