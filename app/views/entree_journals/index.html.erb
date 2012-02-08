@@ -1,0 +1,33 @@
+<h1>Listing entree_journals</h1>
+
+<table>
+  <tr>
+    <th>Libelle</th>
+    <th>Date</th>
+    <th>Debit</th>
+    <th>Credit</th>
+    <th>Moyen</th>
+    <th>Valide</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entree_journals.each do |entree_journal| %>
+  <tr>
+    <td><%= entree_journal.libelle %></td>
+    <td><%= entree_journal.date %></td>
+    <td><%= entree_journal.debit %></td>
+    <td><%= entree_journal.credit %></td>
+    <td><%= entree_journal.moyen %></td>
+    <td><%= entree_journal.valide %></td>
+    <td><%= link_to 'Show', entree_journal %></td>
+    <td><%= link_to 'Edit', edit_entree_journal_path(entree_journal) %></td>
+    <td><%= link_to 'Destroy', entree_journal, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entree journal', new_entree_journal_path %>

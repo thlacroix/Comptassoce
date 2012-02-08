@@ -1,0 +1,2 @@
+module EntreeJournalsHelper
+end

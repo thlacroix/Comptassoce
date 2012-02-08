@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Libelle:</b>
+  <%= @entree_journal.libelle %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @entree_journal.date %>
+</p>
+
+<p>
+  <b>Debit:</b>
+  <%= @entree_journal.debit %>
+</p>
+
+<p>
+  <b>Credit:</b>
+  <%= @entree_journal.credit %>
+</p>
+
+<p>
+  <b>Moyen:</b>
+  <%= @entree_journal.moyen %>
+</p>
+
+<p>
+  <b>Valide:</b>
+  <%= @entree_journal.valide %>
+</p>
+
+
+<%= link_to 'Edit', edit_entree_journal_path(@entree_journal) %> |
+<%= link_to 'Back', entree_journals_path %>

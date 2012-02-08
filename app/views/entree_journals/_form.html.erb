@@ -1,0 +1,41 @@
+<%= form_for(@entree_journal) do |f| %>
+  <% if @entree_journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entree_journal.errors.count, "error") %> prohibited this entree_journal from being saved:</h2>
+
+      <ul>
+      <% @entree_journal.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :libelle %><br />
+    <%= f.text_field :libelle %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :debit %><br />
+    <%= f.text_field :debit %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br />
+    <%= f.text_field :credit %>
+  </div>
+  <div class="field">
+    <%= f.label :moyen %><br />
+    <%= f.text_field :moyen %>
+  </div>
+  <div class="field">
+    <%= f.label :valide %><br />
+    <%= f.check_box :valide %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

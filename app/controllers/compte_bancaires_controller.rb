@@ -1,4 +1,11 @@
 class CompteBancairesController < ApplicationController
+
+before_filter :sous_classes, :only => [:new, :edit]
+
+  def sous_classes
+    @sous_classes = CategorieComptable.find_by_numero(5).categorie_comptables
+  end
+   
   # GET /compte_bancaires
   # GET /compte_bancaires.json
   def index
@@ -24,7 +31,6 @@ class CompteBancairesController < ApplicationController
   # GET /compte_bancaires/new
   # GET /compte_bancaires/new.json
   def new
-    @sous_classes = CategorieComptable.find_by_numero(5).categorie_comptables
     @compte_bancaire = CompteBancaire.new
 
     respond_to do |format|
