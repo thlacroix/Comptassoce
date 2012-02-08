@@ -1,4 +1,11 @@
 class FacturesController < ApplicationController
+
+before_filter :sous_classes, :only => [:new,:edit]
+
+  def sous_classes
+    @sous_classes = CategorieComptable.where(:niveau => 2)
+  end
+ 
   # GET /factures
   # GET /factures.json
   def index
@@ -29,7 +36,6 @@ class FacturesController < ApplicationController
   # GET /factures/new
   # GET /factures/new.json
   def new
-    @sous_classes = CategorieComptable.where(:niveau => 2)
     case params[:controller]
       when "facture_recues"
         @facture = FactureRecue.new

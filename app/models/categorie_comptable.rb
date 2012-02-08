@@ -37,7 +37,7 @@ class CategorieComptable < ActiveRecord::Base
   def last(num)
     last = CategorieComptable.find_by_numero(num).categorie_comptables.order("numero ASC").last
     if (last.nil?)
-      return num*10000 #pour avoir 4 zeros en plus
+      return num*10000 + 1 #pour avoir 4 zeros en plus
     else
       return last.numero + 1
     end
