@@ -1,8 +1,8 @@
 class CategorieComptable < ActiveRecord::Base
   belongs_to :entree_journal
-  has_one :tier
+  has_one :tier, :dependent => :destroy
   has_many :facture
-  has_one :compte_bancaire
+  has_one :compte_bancaire, :dependent => :destroy
   belongs_to :categorie_comptable
   has_many :categorie_comptables
 
