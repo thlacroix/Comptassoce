@@ -2,6 +2,7 @@ class CompteBancairesController < ApplicationController
 
 before_filter :sous_classes, :only => [:new, :edit]
 
+  #permet de recupérer les sous classes associées aux comptes bancaires
   def sous_classes
     @sous_classes = CategorieComptable.find_by_numero(5).categorie_comptables
   end

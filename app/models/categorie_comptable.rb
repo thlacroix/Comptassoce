@@ -7,7 +7,8 @@ class CategorieComptable < ActiveRecord::Base
   has_many :categorie_comptables
 
   validates :numero, :uniqueness => true
-  
+ 
+  # récupère un tableau de tous les parents de la catégorie dans l'arborescence de catégorie_comptable 
   def parents
     parents = []
     parent = self
@@ -18,6 +19,7 @@ class CategorieComptable < ActiveRecord::Base
     return parents
   end
 
+  # Détermine si la catégorie est une classe, une sous classe ou une catégorie
   def libelle
     case niveau
       when 1
@@ -29,6 +31,7 @@ class CategorieComptable < ActiveRecord::Base
     end
   end
 
+  # Permet de renvoyer le nom et le numéro ensemble séparé d'un tiret
   def numero_nom
     "#{numero} - #{nom}"
   end

@@ -2,6 +2,7 @@ class FacturesController < ApplicationController
 
 before_filter :sous_classes, :only => [:new,:edit]
 
+  #récupère toutes les sous classes crées
   def sous_classes
     @sous_classes = CategorieComptable.where(:niveau => 2)
   end
